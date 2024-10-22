@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/chat.css"> <!-- Enlazar CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Iconos -->
+    <title>Chatbot de Inteligencia</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="menu">
+            <ul class="items">
+                <li class="item"><i class="fa fa-home" aria-hidden="true"></i></li>
+                <li class="item"><i class="fa fa-user" aria-hidden="true"></i></li>
+                <li class="item"><i class="fa fa-pencil" aria-hidden="true"></i></li>
+                <li class="item item-active"><i class="fa fa-commenting" aria-hidden="true"></i></li>
+                <li class="item"><i class="fa fa-file" aria-hidden="true"></i></li>
+                <li class="item"><i class="fa fa-cog" aria-hidden="true"></i></li>
+            </ul>
+        </nav>
+        
+        <section class="chat">
+            <div class="header-chat">
+                <h2>Chatbot</h2>
+            </div>
+            <div id="messages" class="messages"></div>
+            <div class="footer-chat">
+                <input type="text" id="userInput" placeholder="Escribe tu mensaje aquí..." disabled>
+                <button id="sendButton" disabled>Enviar</button>
+            </div>
+        </section>
+    </div>
+    
+    <script src="/JS/script2.js"></script> <!-- Enlazar JavaScript -->
+</body>
+</html>

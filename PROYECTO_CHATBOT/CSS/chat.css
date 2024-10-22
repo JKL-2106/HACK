@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.menu {
+    width: 70px;
+    background: #4768b5;
+}
+
+.menu .items {
+    list-style: none;
+    padding: 0;
+}
+
+.menu .items .item {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9fb5ef;
+    font-size: 17pt;
+    border-bottom: 1px solid #6780cc;
+    cursor: pointer;
+}
+
+.menu .items .item-active {
+    background-color: #5172c3;
+    color: #FFF;
+}
+
+.chat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-chat {
+    background-color: #4768b5;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Permitir desplazamiento */
+    background-color: #f0f4ff; /* Fondo más claro */
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column; /* Alinear mensajes verticalmente */
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word; /* Permitir ajuste de línea */
+}
+
+.message.bot {
+    background-color: #e0f7fa; /* Color del mensaje del bot */
+    align-self: flex-start; /* Alinear a la izquierda */
+}
+
+.message.user {
+    background-color: #c8e6c9; /* Color del mensaje del usuario */
+    align-self: flex-end; /* Alinear a la derecha */
+}
+
+.footer-chat {
+    display: flex;
+    padding: 10px;
+}
+
+.footer-chat input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.footer-chat button {
+    background-color: #4768b5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
