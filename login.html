@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga-Aerea</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Estilo para la notificación */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #CA3B3B; /* Color de fondo */
+            color: white; /* Color del texto */
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-size: 18px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+            z-index: 1000; /* Z-index para asegurar que esté encima de otros elementos */
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <div class="contenedor__todo">
+        <div class="caja__trasera">
+            <div class="caja__trasera-login">
+                <h3>¿Ya tiene una cuenta?</h3>
+                <p>Inicie sesión para ingresar</p>
+                <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+            </div>
+            <div class="caja__trasera-register">
+                <h3>Inicia sesión o registrate </h3>
+                <h3>si no tienes usuario</h3>
+
+                <button id="btn__registrarse">Regístrarse</button>
+            </div>
+            
+        </div>
+
+        <!--Formulario de Login y registro-->
+        <div class="contenedor__login-register">
+            <!--Login-->
+            <form action="login_validar.php" method="POST" class="formulario__login">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" id="usuarioAcceso" name="usuario" placeholder="Usuario" required>
+                <input type="password" id="contralog" name="contra" placeholder="Contraseña" required>
+                <center>
+                    <button type="submit" id="btn-login">Ingresar</button>
+                    <button type="button" id="btn-regresar" class="btn-regresar" onclick="clearFields()">Cancelar</button>
+                </center>
+            </form>
+
+
+            <!--Register-->
+            <form action="registroAdm.php" method="POST" class="formulario__register">
+                <h2>Bienvenido a <br>Carga-Aerea</h2>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre Completo" required>
+                
+                <input type="text" name="correo" id="correo" placeholder="Correo Electronico" required>
+                <input type="text" name="usuario" id="usuario" placeholder="Usuario" required>
+                <input type="password" name="contra" id="contra" placeholder="Contraseña" required>
+                <center>
+                <button type="submit" id="btn-registrarse">Regístrarse</button>
+                </center>
+            </form>
+        </div>
+    </div>
+    <div class="caja_comandos">
+        <p><b>Comandos para poder navegar:</b><br><br>
+        <b>Cambiar registro:</b> cambia en <br>automatico al registro<br>
+        <b>Cambiar sesión:</b> cambia en <br>automatico al Inicio de Sesión<br>
+        <b>Apagar micrófono:</b> se apaga el <br>microfono<br>
+        </p>
+    </div>
+    <style>
+        p {
+  text-align: justify;
+}
+</style>
+
+</main>
+
+
+<!-- Botón de micrófono -->
+<button id="mic-button" style="position: fixed; bottom: 10px; right: 10px; font-size: 24px; padding: 10px 20px;">🎤</button>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
